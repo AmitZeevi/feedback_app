@@ -8,7 +8,6 @@ import FeedbackList from './components/FeedbackList'
 function App(){
     const [feedback, setFeedback] = useState(FeedbackData)
 
-    
     return (
         <>
             <Header  />
