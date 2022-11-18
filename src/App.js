@@ -5,6 +5,8 @@ import Header from "./components/Header"
 import FeedbackData from './data/FeedbackData'
 import FeedbackList from './components/FeedbackList'
 import FeedbackForm from './components/FeedbackForm'
+import AboutPage from './pages/AboutPage'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 // @todo - npm i uuid
 // import {v4 as uuidv4} from 'uuid'
 
@@ -31,14 +33,23 @@ function App(){
     }
 
     return (
-        <>
-            <Header  />
-            <div className="container">
-            <FeedbackForm handleAdd={addFeedback} >Form</FeedbackForm>
-            <FeedbackStats feedback={feedback}/>
-            <FeedbackList feedback={feedback} handleDelet={deletFeedback} /> 
-             </div>
-        </>
+        <Router>
+        <Header />
+        <div className="container">
+            <Routes>
+                <Route exact path='/' element = {
+                    <>
+                      <FeedbackForm handleAdd={addFeedback} >Form</FeedbackForm>
+                    <FeedbackStats feedback={feedback}/>
+                    <FeedbackList feedback={feedback} handleDelet={deletFeedback} />
+                    </>
+                }> 
+                </Route> 
+                <Route path='/about' element = {<AboutPage/>} />
+            </Routes>
+            </div>
+        </Router>
+         
         
     )
 }
