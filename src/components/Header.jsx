@@ -17,7 +17,7 @@ function Header({text, bgColor, textColor}) {
 }
 
 Header.defaultProps = {
-    text: 'Autodidact course 2022',
+    text: 'Feedback Component',
     bgColor: '  rgba(0,0,0,0.4)',
     textColor: '    #ff6a95'
 }
