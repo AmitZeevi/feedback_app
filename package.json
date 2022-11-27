@@ -48,7 +48,8 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AmitZeevi/feedback_app.git"
+    "url": "git+https://github.com/AmitZeevi/feedback_app.git",
+    "nth-check": ">=2.0.1"
   },
   "keywords": [],
   "author": "",
